@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.check {
+    position: relative;
+    padding: 5px;
+}
+.check::before{
+    content: '\2713';
+    position: absolute;
+    left: 7%;
+    top: -38%;
+    color: rgb(147 51 234);
+    width: 90%;
+    height: 90%;
+    font-weight: bold;
+    display: var(--show);
+}
