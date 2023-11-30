@@ -5,7 +5,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <>
-      <header className="flex items-center justify-between sm:mx-4 mx-2 my-2 rounded-lg bg-purple-600 sm:px-4 px-2 py-2 sm:flex-row flex-col">
+      <header className="flex items-center justify-between  rounded-sm bg-purple-600 sm:px-4 px-2 py-2 sm:flex-row flex-col">
         <div className="logo">
           <h1 className="sm:text-3xl text-2xl font-bold text-white">HRTest</h1>
         </div>

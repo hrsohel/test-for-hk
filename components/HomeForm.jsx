@@ -9,7 +9,7 @@ const HomeForm = () => {
     <>
       <form
         method="post"
-        className="w-full bg-white sm:w-[70%] md:w-[60%] lg:w-[40%] sm:p-4 p-2 rounded-md border-2 border-purple-600 "
+        className="w-full bg-white sm:w-[70%] md:w-[60%] lg:w-[40%] sm:p-4 p-2 rounded-md border-[1px] border-purple-600 "
       >
         <label
           htmlFor="name"
@@ -19,7 +19,7 @@ const HomeForm = () => {
         </label>
         <input
           type="text"
-          className="p-2 w-full sm:text-lg text-[0.9rem] focus:border-purple-600 border-2 rounded-md outline-none my-2"
+          className="p-2 w-full sm:text-lg text-[0.9rem] focus:border-purple-600 border-[1px] rounded-md outline-none my-2"
           name="name"
           id="name"
           placeholder="Enter your name"
@@ -35,12 +35,12 @@ const HomeForm = () => {
             onClick={() => {
               setShowBox(!shoeBox);
             }}
-            className="p-2 h-[2.5rem] w-full sm:text-lg text-[0.9rem] focus:border-purple-600 border-2 rounded-md outline-none"
+            className="flex items-center justify-between p-2 h-[2.5rem] w-full sm:text-lg text-[0.9rem] focus:border-purple-600 border-[1px] rounded-md outline-none"
           >
-            {option}
+            <p>{option}</p>
           </div>
           {shoeBox ? (
-            <div className="absolute left-0 top-full bg-white z-10 w-full p-2 border-[1px] border-black rounded-md">
+            <div className="absolute left-0 top-full bg-white z-10 w-full p-2 border-[1px] border-purple-600 rounded-md">
               <p
                 onClick={() => {
                   setOption("facebook");
@@ -80,7 +80,7 @@ const HomeForm = () => {
               else setcheck("none");
             }}
             style={{ "--show": check }}
-            className="w-[1.1rem] h-[1.1rem] check rounded-sm border-2 border-black"
+            className="w-[1.1rem] h-[1.1rem] check rounded-sm border-[1px] border-black"
           ></div>
           <label
             onClick={() => {
@@ -96,7 +96,7 @@ const HomeForm = () => {
         <input
           type="submit"
           value="Save"
-          className="px-4 py-1 my-2 bg-purple-600 text-xl text-white rounded-md cursor-pointer"
+          className="px-4 py-1 my-2 bg-purple-600 sm:text-lg text-[0.9rem] text-white rounded-sm cursor-pointer"
         />
       </form>
     </>
