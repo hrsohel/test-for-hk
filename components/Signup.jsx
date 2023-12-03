@@ -22,6 +22,11 @@ const Signup = () => {
     else history.push("/login");
     setLoading(false);
   };
+  React.useEffect(() => {
+    axios.get("/api/session").then((res) => {
+      if (res.data?.message) history.push("/");
+    });
+  }, []);
   return (
     <>
       <form

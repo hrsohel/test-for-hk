@@ -21,6 +21,11 @@ const LoginForm = () => {
     else history.push("/");
     setLoading(false);
   };
+  React.useEffect(() => {
+    axios.get("/api/session").then((res) => {
+      if (res.data?.message) history.push("/");
+    });
+  }, []);
   return (
     <>
       <form
