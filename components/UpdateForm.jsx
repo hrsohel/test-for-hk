@@ -72,9 +72,13 @@ const UpdateForm = () => {
     formData.append("subCat", sectors.subCat);
     formData.append("subsubCat", sectors.subsubCat);
     formData.append("subsubsubCat", sectors.subsubsubCat);
-    await axios.patch("/api/add-sectors", formData);
+    const isCategoryNull = Object.values(sectors).every((value) => !value);
+    if (isCategoryNull) {
+      alert("Please select Sector field.");
+    } else await axios.patch("/api/add-sectors", formData);
     setLoading(false);
     setupdate(!update);
+    setOption("Update sectors");
   };
   return (
     <>
